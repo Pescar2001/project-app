@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    
+    
+}
+
+header {
+    height: 150px;
+    position: relative;
+}
+
+nav{
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px 60px 0 60px;
+    
+}
+
+nav li {
+    list-style: none;
+    display: inline-block;
+    padding-left:10px;
+    padding-right:10px;
+}
+
+nav li span {
+    padding-left: 5px;
+}
+
+li a {
+    padding: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
+
+.cart ion-icon {
+    vertical-align: bottom;
+    font-size: 20px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+img {
+    height: 200px;
+    width: 200px;
+    background-color: white;
+}
+
+.image {
+    margin-right: 20px;
+    margin-left: 20px;
+    position: relative;
+
+    
+}
+
+.add-cart {
+    position: absolute;
+    width: 100%;
+    background-color: gray;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    cursor: pointer;
+    text-align: center;
+    bottom:0;
+    text-decoration: none;
+    color: black;
+
+}
+
+.image:hover .cart1,
+.image:hover .cart2,
+.image:hover .cart3,
+.image:hover .cart4,
+.image:hover .cart5,
+.image:hover .cart6,
+.image:hover .cart7,
+.image:hover .cart8,
+.image:hover .cart9,
+.image:hover .cart10 {
+    bottom: 50px;
+    opacity: 1;
+    padding: 10px;
+}
+
+/* cart page*/
+.products-container {
+    max-width: 70vw;
+    justify-content: space-around;
+    margin:  0 auto;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    padding: 0 0 100px 0 ;
+    
+}
+
+
+
+.product-header{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+   
+    border-bottom: 4px solid lightgray;
+    padding: 20px 0 20px 0;
+    font-size: large;
+    margin-bottom:30px ;
+
+}
+.products{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+ .product-title {
+    padding-left: 100px ;
+}
+
+
+
+.product {
+    
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    width: 90%;
+    padding: 10px 0;
+    border-bottom: 1px solid gray;
+    
+}
+
+.product .product-title{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.delete{
+    top: 100px;
+    position: relative;
+    font-size: 35px;
+    color: red;
+    cursor: pointer;
+
+}
+.total{
+    padding: 30xp;
+    font-size: 2rem;
+}
