@@ -26,9 +26,6 @@ function deleteItems(index){
 
 }
 
-
-
-
 function displayCart() {
     let cartItems= localStorage.getItem("cartItems");
 
@@ -60,20 +57,17 @@ function displayCart() {
                  </div>
                  </div>
 
-                
-
-
-            
-
-
-
                 <span class="price"> ${product.price}$</span>
 
              <span class="quantity"> ${quantity} </span> 
 
              
              </div> 
-            ${i === (cartItemsArray.length - 1) ? `             <div class="total">Total: ${totalCost} $ </div> 
+            ${i === (cartItemsArray.length - 1) ? `<div>
+            <div class="total">Total: ${totalCost} $ </div> 
+            <button id="checkout" class="checkout">Checkout</button>
+            </div> 
+            
             `: ``}
              
             `
@@ -84,21 +78,21 @@ function displayCart() {
     }
 }
 
-function calculateTotalCart ()  {
-    let cartItems= localStorage.getItem("cartItems");
-
-    let cartItemsArray = cartItems ?  JSON.parse(cartItems) : null;
-
-
-
+function checkout () {
+    localStorage.setItem("cartItems",
+    [])
 }
-
-
 
 displayCart();
 loadCartNumbers();
 
 const deleteButtons = document.querySelectorAll(".delete")
+const checkoutButton = document.querySelector("#checkout");
+
+checkoutButton.addEventListener("click",()=>{
+    checkout();
+    location.reload()
+})
 
 for (let i=0; i < deleteButtons.length; i++) {
     deleteButtons[i].addEventListener('click', (e) =>{

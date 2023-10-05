@@ -61,9 +61,16 @@ img {
 }
 
 .image {
-    margin-right: 20px;
-    margin-left: 20px;
+    margin: 20px;
+   
     position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .17);
 
     
 }
@@ -71,12 +78,13 @@ img {
 .add-cart {
     position: absolute;
     width: 100%;
-    background-color: gray;
+    background-color: lightgrey;
     transition: all 0.3s ease-in-out;
     opacity: 0;
     cursor: pointer;
     text-align: center;
     bottom:0;
+    left: 0;
     text-decoration: none;
     color: black;
 
@@ -92,7 +100,6 @@ img {
 .image:hover .cart8,
 .image:hover .cart9,
 .image:hover .cart10 {
-    bottom: 50px;
     opacity: 1;
     padding: 10px;
 }
@@ -152,6 +159,8 @@ img {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    align-items: center;
+    
 }
 
 .delete{
@@ -165,4 +174,18 @@ img {
 .total{
     padding: 30xp;
     font-size: 2rem;
+}
+
+.checkout{
+    margin: 30px auto;
+    padding: 10px;
+    font-size: large;
+    box-shadow: 1px 0px 10px rgba(0, 0, 0, .1);
+    border: none;
+    background: rgb(190, 187, 187);
+}
+
+.checkout:hover{
+    transform: scale(.95);
+    box-shadow: 1xp 1px 10px rgba(0, 0, 0, .5);
 }
